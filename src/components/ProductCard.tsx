@@ -2,9 +2,10 @@ import type { Product } from "../types/product";
 
 interface ProductCardProps {
   product: Product;
+  onAdd: (product: Product) => void;
 }
 
-export function ProductCard({ product }: ProductCardProps) {
+export function ProductCard({ product, onAdd }: ProductCardProps) {
   return (
     <div className="card h-100">
       <img
@@ -20,6 +21,9 @@ export function ProductCard({ product }: ProductCardProps) {
 
         <strong>₹{product.price.toFixed(2)}</strong>
       </div>
+      <button className="btn btn-primary" onClick={() => onAdd(product)}>
+        Add to Cart
+      </button>
     </div>
   );
 }
