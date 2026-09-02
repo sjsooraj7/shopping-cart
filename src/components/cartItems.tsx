@@ -1,7 +1,13 @@
 import { useCartStore } from "../store/cartStore";
+import { useCartCalculations } from "../hooks/useCartCalculations";
 
-export function CartPanel() {
-  const items = useCartStore((state) => state.items);
+interface CartItemsProps {
+  onCheckout: () => void;
+}
+
+export function CartItems({ onCheckout }: CartItemsProps) {
+  const { items, subtotal, tax, discount, finalTotal, canCheckout } =
+    useCartCalculations();
 
   const increaseQuantity = useCartStore((state) => state.increaseQuantity);
 
@@ -91,6 +97,46 @@ export function CartPanel() {
             </div>
           </div>
         ))}
+
+        {/* Cart Summary */}
+        <div className="border-top pt-4 mt-4">
+          <div className="d-flex justify-content-between mb-2">
+            <span>Subtotal</span>
+
+            <span>₹{subtotal.toFixed(2)}</span>
+          </div>
+          <div className="d-flex justify-content-between mb-2">
+            <span>Tax (5%)</span>
+
+            <span>₹{tax.toFixed(2)}</span>
+          </div>
+          <div className="d-flex justify-content-between mb-2">
+            <span>Discount</span>
+
+            <span className="text-success">-₹{discount.toFixed(2)}</span>
+          </div>
+          <div className="d-flex justify-content-between border-top pt-3 mt-3">
+            <strong>Final Total</strong>
+
+            <strong>₹{finalTotal.toFixed(2)}</strong>
+          </div>
+          {/* Minimum checkout warning */}
+          {!canCheckout && (
+            <div className="alert alert-warning mt-3 mb-0">
+              Minimum checkout amount is $10.
+            </div>
+          )}
+
+          {/* Checkout */}
+          <button
+            type="button"
+            className="btn btn-primary w-100 mt-3"
+            disabled={!canCheckout}
+            onClick={onCheckout}
+          >
+            Proceed to Checkout
+          </button>
+        </div>
       </div>
     </div>
   );
