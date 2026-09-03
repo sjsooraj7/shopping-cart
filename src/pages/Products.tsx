@@ -4,7 +4,7 @@ import { useCartStore } from "../store/cartStore";
 import { FilterBar } from "../components/FilterBar";
 import { ProductCard } from "../components/ProductCard";
 import { Header } from "../components/Header";
-import { ProductSkeleton } from "../components/ProductSkelton";
+import { ProductSkeleton } from "../components/ProductSkeleton";
 
 function Products() {
   const { data, isLoading, isError } = useProduct();
