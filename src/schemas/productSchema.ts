@@ -8,6 +8,7 @@ const productSchema = z.object({
     price: z.number(),
     rating: z.number(),
     thumbnail: z.string(),
+    description: z.string()
 })
 
 export const productsResponseSchema = z.object({
