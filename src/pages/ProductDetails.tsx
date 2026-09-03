@@ -13,6 +13,28 @@ export default function ProductDetails() {
 
   const product = data?.products.find((item) => item.id === Number(id));
 
+  if (!product) {
+    return (
+      <>
+        <Header />
+  
+        <main className="container py-4">
+          <div className="alert alert-warning">
+            Product not found.
+          </div>
+  
+          <button
+            type="button"
+            className="btn btn-primary"
+            onClick={() => navigate("/")}
+          >
+            Back to Products
+          </button>
+        </main>
+      </>
+    );
+  }
+
   return (
     <>
       <Header />
