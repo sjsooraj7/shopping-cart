@@ -106,7 +106,6 @@ export default function Cart() {
               </div>
             ))}
 
-            {/* Cart Summary */}
             <div className="border-top pt-4 mt-4">
               <div className="d-flex justify-content-between mb-2">
                 <span>Subtotal</span>

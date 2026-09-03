@@ -1,6 +1,5 @@
 import {z} from "zod";
 
-// Create the product schema
 const productSchema = z.object({
     id: z.number(),
     title: z.string(),

@@ -180,7 +180,6 @@ export default function Checkout() {
                 <h2 className="h4 mb-4">billing Information</h2>
 
                 <div className="row g-3">
-                  {/* Full name */}
                   <div className="col-12">
                     <label className="form-label">Full Name</label>
 
@@ -199,7 +198,6 @@ export default function Checkout() {
                     )}
                   </div>
 
-                  {/* Email */}
                   <div className="col-12 col-md-6">
                     <label className="form-label">Email</label>
 
@@ -218,7 +216,6 @@ export default function Checkout() {
                     )}
                   </div>
 
-                  {/* Phone */}
                   <div className="col-12 col-md-6">
                     <label className="form-label">Phone</label>
 
@@ -237,7 +234,6 @@ export default function Checkout() {
                     )}
                   </div>
 
-                  {/* Address */}
                   <div className="col-12">
                     <label className="form-label">Address</label>
 
@@ -256,7 +252,6 @@ export default function Checkout() {
                     )}
                   </div>
 
-                  {/* City */}
                   <div className="col-12 col-md-6">
                     <label className="form-label">City</label>
 
@@ -275,7 +270,6 @@ export default function Checkout() {
                     )}
                   </div>
 
-                  {/* Postal code */}
                   <div className="col-12 col-md-6">
                     <label className="form-label">Postal Code</label>
 
@@ -326,7 +320,6 @@ export default function Checkout() {
               <div className="card-body">
                 <h2 className="h4 mb-4">Payment Summary</h2>
 
-                {/* billing details */}
                 <div className="mb-4">
                   <h3 className="h6">billing Details</h3>
 
@@ -343,7 +336,6 @@ export default function Checkout() {
                   </p>
                 </div>
 
-                {/* Items */}
                 <div className="mb-4">
                   <h3 className="h6">Order Items</h3>
 
@@ -361,7 +353,6 @@ export default function Checkout() {
                   ))}
                 </div>
 
-                {/* Totals */}
                 <div>
                   <div className="d-flex justify-content-between mb-2">
                     <span>Subtotal</span>
