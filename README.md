@@ -38,7 +38,7 @@ The application retrieves products from the DummyJSON API and provides:
 
 ### 1. Clone the repository
 
-git clone <repository-url>
+git clone https://github.com/sjsooraj7/shopping-cart.git
 
 ### 2. Navigate to the project
 
